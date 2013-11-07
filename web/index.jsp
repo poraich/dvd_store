@@ -47,7 +47,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     </head>
     <body>
     <jsp:forward page="ListPerson" />
-    <p> hello Katie, Any Craic? Yes? No? Fine don't talk to me so! it wont let me!</p>
+    <p> hello Katie, Any Craic? Yes? No? Fine don't talk to me so! I'm hungry!</p>
     
     </body>
 </html>
