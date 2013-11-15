@@ -1,4 +1,32 @@
-
+/*
+ * Copyright (c) 2010, Oracle. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * * Redistributions of source code must retain the above copyright notice,
+ *   this list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
+ *
+ * * Neither the name of Oracle nor the names of its contributors
+ *   may be used to endorse or promote products derived from this software without
+ *   specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+ * THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 package enterprise.web_jpa_war.servlet;
 
@@ -43,18 +71,11 @@ public class CreatePersonServlet extends HttpServlet {
             String id         = (String) request.getParameter("id");
             String firstName  = (String) request.getParameter("firstName");
             String lastName   = (String) request.getParameter("lastName");
-            String email  = (String) request.getParameter("E-mail");
-            String d   = (String) request.getParameter("Date-of-birth");
-            String pw   = (String) request.getParameter("Password");
-            String a   = (String) request.getParameter("Address");
+            String email      = (String) request.getParameter("email");
             
             //Create a person instance out of it
-            Person p1;
-            p1 = new  Person(id,firstName,lastName,email,d,pw, a);
+            Person person = new Person(id, firstName, lastName, email);
             
-            
-
-   
             //begin a transaction
             utx.begin();
             //create an em. 
@@ -62,7 +83,7 @@ public class CreatePersonServlet extends HttpServlet {
             //the transaction
             em = emf.createEntityManager();
             //persist the person entity
-            em.persist(p1);
+            em.persist(person);
             //commit transaction which will trigger the em to 
             //commit newly created entity into database
             utx.commit();
