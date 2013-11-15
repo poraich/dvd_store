@@ -72,9 +72,12 @@ public class CreatePersonServlet extends HttpServlet {
             String firstName  = (String) request.getParameter("firstName");
             String lastName   = (String) request.getParameter("lastName");
             String email      = (String) request.getParameter("email");
+            String password      = (String) request.getParameter("password");
+            String address      = (String) request.getParameter("address");
+            String dob      = (String) request.getParameter("dob");
             
             //Create a person instance out of it
-            Person person = new Person(id, firstName, lastName, email);
+            Person person = new Person(id, firstName, lastName, email, password, address, dob);
             
             //begin a transaction
             utx.begin();
