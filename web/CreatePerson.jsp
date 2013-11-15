@@ -49,6 +49,9 @@
         <tr><td>FirstName</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
         <tr><td>LastName</td><td><input type="text" id = "lastName" name="lastName" /></td></tr>
         <tr><td>Email</td><td><input type="text" id = "email" name="email" /></td></tr>
+        <tr><td>Password</td><td><input type="text" id = "password" name="password" /></td></tr>
+        <tr><td>Address</td><td><input type="text" id = "address" name="address" /></td></tr>
+        <tr><td>DOB</td><td><input type="text" id = "dob" name="dob" /></td></tr>
         
         
     </table>
