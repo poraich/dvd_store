@@ -56,6 +56,16 @@ public class Person {
     
     @Column(name = "EMAIL")
     private String email;
+    
+    @Column(name = "PASSWORD")
+    private String password;
+     
+    @Column(name = "ADDRESS")
+    private String address;
+      
+    @Column(name = "DOB")
+    private String dob;
+     
 
     /**
      * Creates a new instance of Person
@@ -63,11 +73,14 @@ public class Person {
     public Person() {
     }
 
-    public Person(String id, String firstName, String lastName, String email) {
+    public Person(String id, String firstName, String lastName, String email, String password, String address, String dob) {
         this.id = id;
         this.firstName = firstName;
         this.lastName  = lastName;
         this.email = email;
+        this.address = address;
+        this.password = password;
+        this.dob = dob;
     }
 
     public String getId() {
@@ -84,6 +97,18 @@ public class Person {
     
      public String getEmail() {
         return this.email;
+    }
+     
+    public String getPassword() {
+      return this.password;
+    }
+       
+         public String getAdd() {
+        return this.address;
+    }
+         
+           public String getDOB() {
+        return this.dob;
     }
     
 }
