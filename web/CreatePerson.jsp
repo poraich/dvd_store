@@ -48,9 +48,9 @@
         <tr><td>ID:</td><td><input type="text" id = "id" name="id" /></td></tr>
         <tr><td>FirstName</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
         <tr><td>LastName</td><td><input type="text" id = "lastName" name="lastName" /></td></tr>
-        <tr><td>Email</td><td><input type="text" id = "Email" name="" /></td></tr>
-        <tr><td>Address</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
-        <tr><td>Password</td><td><input type="text" id = "firstName" name="firstName" /></td></tr>
+        <tr><td>email</td><td><input type="text" id = "lastName" name="lastName" /></td></tr>
+        
+        
     </table>
     <input type="submit" id="CreateRecord" value="CreateRecord" />
     </form>
