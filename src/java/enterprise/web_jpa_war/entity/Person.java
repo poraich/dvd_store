@@ -41,54 +41,45 @@ import javax.persistence.Table;
  * @author mitesh
  */
 @Entity
-@Table(name = "PERSON")
+@Table(name = "Customer")
 public class Person {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "cID")
     private String id;
 
-    @Column(name = "LASTNAME")
-    private String lastName;
+    @Column(name = "sname")
+    private String surName;
 
-    @Column(name = "FIRSTNAME")
+    @Column(name = "fname")
     private String firstName;
     
-    @Column(name = "EMAIL")
+    @Column(name = "email")
     private String email;
     
-    @Column(name = "PASSWORD")
+     @Column(name = "password")
     private String password;
-     
-    @Column(name = "ADDRESS")
-    private String address;
-      
-    @Column(name = "DOB")
-    private String dob;
-     
-
+    
     /**
      * Creates a new instance of Person
      */
     public Person() {
     }
 
-    public Person(String id, String firstName, String lastName, String email, String password, String address, String dob) {
+    public Person(String id, String firstName, String surName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
-        this.lastName  = lastName;
+        this.surName  = surName;
         this.email = email;
-        this.address = address;
         this.password = password;
-        this.dob = dob;
     }
 
     public String getId() {
         return this.id;
     }
 
-    public String getLastName() {
-        return this.lastName;
+    public String getSurName() {
+        return this.surName;
     }
 
     public String getFirstName() {
@@ -98,17 +89,8 @@ public class Person {
      public String getEmail() {
         return this.email;
     }
-     
-    public String getPassword() {
-      return this.password;
-    }
-       
-         public String getAdd() {
-        return this.address;
-    }
-         
-           public String getDOB() {
-        return this.dob;
-    }
     
+      public String getPassword() {
+        return this.password;
+    }
 }
