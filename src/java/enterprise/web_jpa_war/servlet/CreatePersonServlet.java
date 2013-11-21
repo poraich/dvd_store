@@ -70,14 +70,12 @@ public class CreatePersonServlet extends HttpServlet {
             //Get the data from user's form
             String id         = (String) request.getParameter("id");
             String firstName  = (String) request.getParameter("firstName");
-            String lastName   = (String) request.getParameter("lastName");
+            String surName   = (String) request.getParameter("surName");
             String email      = (String) request.getParameter("email");
-            String password      = (String) request.getParameter("password");
-            String address      = (String) request.getParameter("address");
-            String dob      = (String) request.getParameter("dob");
+            String password   = (String) request.getParameter("password");
             
             //Create a person instance out of it
-            Person person = new Person(id, firstName, lastName, email, password, address, dob);
+            Person person = new Person(id, firstName, surName, email,password);
             
             //begin a transaction
             utx.begin();
